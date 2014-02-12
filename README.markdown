@@ -1,6 +1,6 @@
 # Vagrant development box
 
-This box is ment as a base for new projects. This box has been tested on OSX, it should work on Linux and it might work on Windows.
+This box is ment as a starting point for new projects. This box has been tested on OSX, it should work on Linux and it might work on Windows.
 
 ## Programming environments
 

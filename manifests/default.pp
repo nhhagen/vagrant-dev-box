@@ -11,8 +11,6 @@ class repositories {
 }
 
 class tools {
-  include apt
-
   package { ['tmux', 'screen', 'wget', 'tree']:
     ensure => present
   }

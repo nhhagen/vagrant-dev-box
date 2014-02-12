@@ -1,6 +1,16 @@
 # Vagrant development box
 
-This box is ment as a starting point for new projects. This box has been tested on OSX, it should work on Linux and it might work on Windows.
+This box is a starting point for new projects. This box has been tested on OSX, it should work on Linux and it might work on Windows.
+
+## Prerequisites
+
+These are things you need to install once on your machine to use this box.
+
+1. [Virtualbox](https://www.virtualbox.org/)
+2. [Vagrant](http://www.vagrantup.com/)
+3. [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest)
+
+        vagrant plugin install vagrant-vbguest
 
 ## Programming environments
 
@@ -24,16 +34,6 @@ This box is ment as a starting point for new projects. This box has been tested 
 * screen
 * curl
 * wget
-
-# Prequisites
-
-These are things you need to install once on your machine to use this box.
-
-1. [Virtualbox](https://www.virtualbox.org/)
-2. [Vagrant](http://www.vagrantup.com/)
-3. [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest)
-
-        vagrant plugin install vagrant-vbguest
 
 # Starting a new project
 

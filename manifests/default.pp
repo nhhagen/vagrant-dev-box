@@ -17,7 +17,7 @@ class tools {
 }
 
 class nodejs-modules {
-  package { ['yo', 'generator-ember', 'generator-angular', 'generator-webapp']:
+  package { ['yo', 'generator-ember', 'generator-angular', 'generator-webapp', 'nodemon']:
     ensure => present,
     provider => 'npm',
   }

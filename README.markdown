@@ -37,16 +37,11 @@ These are things you need to install once on your machine to use this box.
 
 # Starting a new project
 
-Only one project member needs to do this.
+To start a new project run:
 
-    git clone --recursive git@github.com:nhhagen/vagrant-dev-box.git <dir>
-    cd <dir>
-    git remote remove origin
-    git remote add origin <repo url>
-    vim README.markdown # Fix the file to match your project
-    git add -A .
-    git commit -m "Initial project commit"
-    git push
+    curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash <dir> <new repo url>
+
+Only one project member needs to do this.
 
 If you need to add custom tools etc in your modify `manifests/default.pp` to fit your needs.
 

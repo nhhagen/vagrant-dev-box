@@ -2,6 +2,10 @@ stage { 'first':
   before => Stage['main']
 }
 
+stage { 'last':
+  require => Stage['main']
+}
+
 class repositories {
   include apt
   exec { 'apt-get update': command => '/usr/bin/apt-get update' } ->
@@ -72,7 +76,10 @@ include nodejs-modules
 include ruby
 include python
 include tools
-include project
+
+class { 'project':
+  stage => 'last'
+}
 
 Class['repositories'] -> Class['tools']
 Class['repositories'] -> Class['ruby']

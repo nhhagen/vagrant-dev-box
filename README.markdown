@@ -12,29 +12,6 @@ These are things you need to install once on your machine to use this box.
 
         vagrant plugin install vagrant-vbguest
 
-## Programming environments
-
-* node
-* ruby (2.1)
-* python (2.7)
-* java (7)
-
-## Tools
-
-* yo
-    * generator-angular
-    * generator-ember
-    * generator-webapp
-* grunt
-* bower
-* compass
-* sass
-* maven
-* tmux
-* screen
-* curl
-* wget
-
 # Starting a new project
 
 To start a new project run:
@@ -70,4 +47,27 @@ This will place you inside the directory shared with the host OS.
     vagrant halt
 
 This will shutdown the virtual machine.
+
+## Programming environments
+
+* node
+* ruby (2.1)
+* python (2.7)
+* java (7)
+
+## Tools
+
+* yo
+    * generator-angular
+    * generator-ember
+    * generator-webapp
+* grunt
+* bower
+* compass
+* sass
+* maven
+* tmux
+* screen
+* curl
+* wget
 

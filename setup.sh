@@ -5,6 +5,7 @@ function setup {
   git remote add origin $2
 
   rm setup.sh
+  rm LICENSE
   echo -e "# ${1}\n\tgit clone --recursive $2" > README.markdown
 
   git add -A .

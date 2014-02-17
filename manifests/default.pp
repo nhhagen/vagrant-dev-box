@@ -21,7 +21,8 @@ class tools {
 }
 
 class nodejs-modules {
-  package { ['yo', 'generator-ember', 'generator-angular', 'generator-webapp', 'nodemon']:
+  package { ['yo', 'generator-ember', 'generator-angular', 'generator-webapp',
+            'nodemon']:
     ensure => present,
     provider => 'npm',
   }
@@ -29,7 +30,10 @@ class nodejs-modules {
 
 class java {
   exec { 'accept_license':
-    command => 'echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections && echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections',
+    command => 'echo debconf shared/accepted-oracle-license-v1-1 select true \
+               | sudo debconf-set-selections \
+               && echo debconf shared/accepted-oracle-license-v1-1 seen true \
+               | sudo debconf-set-selections',
     cwd => '/home/vagrant',
     user => 'vagrant',
     path => '/usr/bin/:/bin/',

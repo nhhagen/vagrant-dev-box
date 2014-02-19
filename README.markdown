@@ -16,7 +16,7 @@ These are things you need to install once on your machine to use this box.
 
 To start a new project run:
 
-    curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash <dir> <new repo url>
+    curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash -s <new repo url> <dir>
 
 Only one project member needs to do this.
 

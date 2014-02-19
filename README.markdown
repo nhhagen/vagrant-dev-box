@@ -22,8 +22,9 @@ Only one project member needs to do this.
 
 If you want a simple command at hand to start new projects off this box run:
 
-    echo "function newproject { curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash -s $@ ; }" >> ~/.bash_profile
-    source ~/.bash_profile
+__#!/bin/bash__
+
+    echo "function newproject { curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash -s $@ ; }" >> ~/.bash_profile && source ~/.bash_profile
 
 You can now run:
 

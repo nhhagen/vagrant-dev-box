@@ -20,6 +20,15 @@ To start a new project run:
 
 Only one project member needs to do this.
 
+If you want a simple command at hand to start new projects off this box run:
+
+    echo "function newproject { curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash -s $@ ; }" >> ~/.bash_profile
+    source ~/.bash_profile
+
+You can now run:
+
+    newproject <new repo url> <div>
+
 If you need to add custom tools etc in your modify `manifests/default.pp` to fit your needs.
 
 If you have personal configuration needs or tools you need installed that are not used by the project. e.g: custom

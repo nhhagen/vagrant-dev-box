@@ -16,7 +16,9 @@ These are things you need to install once on your machine to use this box.
 
 To start a new project run:
 
-    curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash -s <new repo url> <dir>
+```bash
+curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash -s <new repo url> <dir>
+```
 
 Only one project member needs to do this.
 
@@ -24,11 +26,15 @@ If you want a simple command at hand to start new projects off this box run:
 
 __#!/bin/bash__
 
-    echo "function newproject { curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash -s $@ ; }" >> ~/.bash_profile && source ~/.bash_profile
+```bash
+echo "function newproject { curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash -s $@ ; }" >> ~/.bash_profile && source ~/.bash_profile
+```
 
 You can now run:
 
-    newproject <new repo url> <div>
+```bash
+newproject <new repo url> <div>
+```
 
 If you need to add custom tools etc in your modify `manifests/default.pp` to fit your needs.
 
@@ -38,23 +44,31 @@ dotfiles. Create a `~/.vagrant.d/Vagrantfile` and call provisioning to install y
 Your project might need to expose servers to the host OS (so that you can open websites in a brower etc). To forward a
 port open the `Vagrantfile` a line like this:
 
-    config.vm.network :forwarded_port, guest: <port nr>, host: <port nr>
+```ruby
+config.vm.network :forwarded_port, guest: <port nr>, host: <port nr>
+```
 
 Each project menber can now clone the new repo
 
-    git clone --recursive <repo url>
+```bash
+git clone --recursive <repo url>
+```
 
 # Starting the box
 
-    vagrant up
-    vagrant ssh
-    cd /vagrant
+```bash
+vagrant up
+vagrant ssh
+cd /vagrant
+```
 
 This will place you inside the directory shared with the host OS.
 
 # Stopping the box
 
-    vagrant halt
+```bash
+vagrant halt
+```
 
 This will shutdown the virtual machine.
 

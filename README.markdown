@@ -36,7 +36,9 @@ You can now run:
 newproject <new repo url> <div>
 ```
 
-If you need to add custom tools etc in your modify `manifests/default.pp` to fit your needs.
+[SaltStack](http://www.saltstack.com/community/) is used to install software to change what is installed have a look at the
+[documentation](http://docs.saltstack.com/). For a quicker provisioning process you should remove software that you do
+not need in your project.
 
 If you have personal configuration needs or tools you need installed that are not used by the project. e.g: custom
 dotfiles. Create a `~/.vagrant.d/Vagrantfile` and call provisioning to install your config/tools.

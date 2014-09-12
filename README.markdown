@@ -24,8 +24,6 @@ Only one project member needs to do this.
 
 If you want a simple command at hand to start new projects off this box run:
 
-__#!/bin/bash__
-
 ```bash
 echo "function newproject { curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash -s $@ ; }" >> ~/.bash_profile && source ~/.bash_profile
 ```
@@ -33,7 +31,7 @@ echo "function newproject { curl https://raw.github.com/nhhagen/vagrant-dev-box/
 You can now run:
 
 ```bash
-newproject <new repo url> <div>
+newproject <new repo url> <directory>
 ```
 
 [SaltStack](http://www.saltstack.com/community/) is used to install software to change what is installed have a look at the
@@ -53,7 +51,7 @@ config.vm.network :forwarded_port, guest: <port nr>, host: <port nr>
 Each project menber can now clone the new repo
 
 ```bash
-git clone --recursive <repo url>
+git clone <repo url>
 ```
 
 # Starting the box

@@ -6,7 +6,7 @@ function setup {
 
   rm setup.sh
   rm LICENSE
-  echo -e "# ${2}\n\tgit clone --recursive $1" > README.markdown
+  echo -e "# ${2}\n\tgit clone $1" > README.markdown
 
   git add -A .
   git commit -m "Initial commit"

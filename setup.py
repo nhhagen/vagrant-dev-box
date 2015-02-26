@@ -25,14 +25,14 @@ def setup(args):
         elif os.path.isdir(filepath):
             shutil.rmtree(os.path.join(project_dir, filename))
 
-    origWD = os.getcwd()
-    os.chdir(project_dir)
-    subprocess.call('git init', shell=True)
-    subprocess.call('git remote add origin ' + origin, shell=True)
-    subprocess.call('git add -A .', shell=True)
-    subprocess.call('git commit -m "Initial commit"', shell=True)
-    subprocess.call('git push --set-upstream origin master', shell=True)
-    os.chdir(origWD)
+    subprocess.call('git init', shell=True, cwd=project_dir)
+    subprocess.call('git remote add origin ' + origin, shell=True,
+                    cwd=project_dir)
+    subprocess.call('git add -A .', shell=True, cwd=project_dir)
+    subprocess.call('git commit -m "Initial commit"', shell=True,
+                    cwd=project_dir)
+    subprocess.call('git push --set-upstream origin master', shell=True,
+                    cwd=project_dir)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

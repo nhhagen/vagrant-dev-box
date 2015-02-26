@@ -4,6 +4,4 @@ base:
     - ruby
     - nodejs
     - jdk7
-    - wget
-    - curl
-    - tree
+    - tools

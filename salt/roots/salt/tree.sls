@@ -1,2 +1,0 @@
-tree:
-  pkg.installed

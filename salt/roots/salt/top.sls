@@ -5,3 +5,4 @@ base:
     - nodejs
     - jdk
     - tools
+    # - elasticsearch

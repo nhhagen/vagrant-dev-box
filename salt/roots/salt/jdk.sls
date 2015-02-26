@@ -1,5 +1,5 @@
 #
-# How to install automatically Oracle Java 7 under Salt Stack
+# How to install automatically Oracle Java JDK under Salt Stack
 #
 # Thanks Oracle for complicating things :(
 #
@@ -20,21 +20,26 @@ oracle-license-select:
   cmd.run:
     - unless: which java
     - name: '/bin/echo /usr/bin/debconf shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections'
-    - require_in:
-      - pkg: oracle-java7-installer
-      - cmd: oracle-license-seen-lie
 
 oracle-license-seen-lie:
   cmd.run:
     - name: '/bin/echo /usr/bin/debconf shared/accepted-oracle-license-v1-1 seen true  | /usr/bin/debconf-set-selections'
-    - require_in:
-      - pkg: oracle-java7-installer
+    - require:
+      - cmd: oracle-license-select
 
-oracle-java7-installer:
+# oracle-java7-installer:
+#   pkg:
+#     - installed
+#     - require:
+#       - pkgrepo: oracle-ppa
+#       - cmd: oracle-license-seen-lie
+
+oracle-java8-installer:
   pkg:
-    - installed
+    - latest
     - require:
       - pkgrepo: oracle-ppa
+      - cmd: oracle-license-seen-lie
 
-maven:
-  pkg.installed
+# maven:
+#   pkg.installed

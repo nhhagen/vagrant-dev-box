@@ -7,6 +7,6 @@ base:
     - ruby
     - nodejs
     # - jdk
-    # - elasticsearch
+    # - elasticsearch # requires 'jdk'
     # - rabbitmq
     # - mysql

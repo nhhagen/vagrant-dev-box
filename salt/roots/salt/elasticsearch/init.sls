@@ -1,4 +1,4 @@
-# Include the ``java`` sls in order to use oracle_java_pkg
+# Include the ``jdk`` sls in order to use oracle_java_pkg
 include:
     - jdk
 

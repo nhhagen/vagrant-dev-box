@@ -6,11 +6,14 @@ This box is a starting point for new projects. This box has been tested on OSX, 
 
 These are things you need to install once on your machine to use this box.
 
-1. [Virtualbox](https://www.virtualbox.org/)
-2. [Vagrant](http://www.vagrantup.com/)
-3. [vagrant-vbguest](https://github.com/dotless-de/vagrant-vbguest)
+* [Virtualbox](https://www.virtualbox.org/)
+* [Vagrant](http://www.vagrantup.com/)
 
-        vagrant plugin install vagrant-vbguest
+Then run:
+
+```bash
+vagrant plugin install vagrant-vbguest
+```
 
 ## Starting a new project
 

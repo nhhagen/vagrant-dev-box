@@ -2,11 +2,11 @@
 
 base:
   '*':
+    - tools
     - python
     - ruby
     - nodejs
-    - jdk
-    - tools
+    # - jdk
     # - elasticsearch
     # - rabbitmq
     # - mysql

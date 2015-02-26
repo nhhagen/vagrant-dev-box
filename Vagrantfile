@@ -9,6 +9,9 @@ Vagrant.configure("2") do |config|
     # Elasticsearch
     # config.vm.network :forwarded_port, guest: 9200, host: 9200
     # config.vm.network :forwarded_port, guest: 9300, host: 9300
+    #
+    # MySQL
+    # config.vm.network :forwarded_port, guest: 3306, host: 3306
 
     config.vm.synced_folder "salt/roots/", "/srv/"
     config.vm.provision :salt do |salt|

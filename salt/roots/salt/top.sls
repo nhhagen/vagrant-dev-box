@@ -8,3 +8,4 @@ base:
     - jdk
     - tools
     # - elasticsearch
+    # - mysql

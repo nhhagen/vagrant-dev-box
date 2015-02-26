@@ -12,7 +12,7 @@ These are things you need to install once on your machine to use this box.
 
         vagrant plugin install vagrant-vbguest
 
-# Starting a new project
+## Starting a new project
 
 To start a new project run:
 
@@ -50,7 +50,7 @@ Each project menber can now clone the new repo
 git clone <repo url>
 ```
 
-# Starting the box
+## Starting the box
 
 ```bash
 vagrant up
@@ -60,7 +60,7 @@ cd /vagrant
 
 This will place you inside the directory shared with the host OS.
 
-# Stopping the box
+## Stopping the box
 
 ```bash
 vagrant halt
@@ -68,7 +68,7 @@ vagrant halt
 
 This will shutdown the virtual machine.
 
-# Software
+## Software
 
 [SaltStack](http://www.saltstack.com/community/) is used to install software to change what is installed have a look at the
 [documentation](http://docs.saltstack.com/). For a quicker provisioning process you should remove software that you do

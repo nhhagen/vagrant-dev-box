@@ -20,22 +20,10 @@ vagrant plugin install vagrant-vbguest
 To start a new project run:
 
 ```bash
-curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash -s <new repo url> <dir>
+./setup.sh <new repo url> <dir>
 ```
 
 Only one project member needs to do this.
-
-If you want a simple command at hand to start new projects off this box run:
-
-```bash
-echo "function newproject { curl https://raw.github.com/nhhagen/vagrant-dev-box/master/setup.sh | bash -s $@ ; }" >> ~/.bash_profile && source ~/.bash_profile
-```
-
-You can now run:
-
-```bash
-newproject <new repo url> <directory>
-```
 
 If you have personal configuration needs or tools you need installed that are not used by the project. e.g: custom
 dotfiles. Create a `~/.vagrant.d/Vagrantfile` and call provisioning to install your config/tools.

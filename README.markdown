@@ -20,7 +20,7 @@ vagrant plugin install vagrant-vbguest
 To start a new project run:
 
 ```bash
-./setup.sh <new repo url> <project-directory>
+python setup.py --origin <new repo url> --directory <project-directory>
 ```
 
 Only one project member needs to do this.

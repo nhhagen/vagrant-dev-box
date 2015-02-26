@@ -8,4 +8,5 @@ base:
     - jdk
     - tools
     # - elasticsearch
+    # - rabbitmq
     # - mysql

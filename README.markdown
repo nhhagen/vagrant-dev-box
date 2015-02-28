@@ -8,6 +8,7 @@ These are things you need to install once on your machine to use this box.
 
 * [Virtualbox](https://www.virtualbox.org/)
 * [Vagrant](http://www.vagrantup.com/)
+* [Python](https://www.python.org/), to run the new project setup script.
 
 Then run:
 

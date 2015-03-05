@@ -30,7 +30,7 @@ If you have personal configuration needs or tools you need installed that are no
 dotfiles. Create a `~/.vagrant.d/Vagrantfile` and call provisioning to install your config/tools.
 
 Your project might need to expose servers to the host OS (so that you can open websites in a brower etc). To forward a
-port open the `Vagrantfile` a line like this:
+port open the `./Vagrantfile` a line like this:
 
 ```ruby
 config.vm.network :forwarded_port, guest: <port nr>, host: <port nr>

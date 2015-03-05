@@ -1,6 +1,6 @@
 python:
-  pkg.installed:
-    - names:
+  pkg.latest:
+    - pkgs:
       - python
       - python-dev
       - python-virtualenv

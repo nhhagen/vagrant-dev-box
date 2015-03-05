@@ -1,16 +1,7 @@
-node_ppa:
-  pkgrepo.managed:
-    - ppa: chris-lea/node.js
+node_repo:
+  cmd.run:
+    - name: curl -sL https://deb.nodesource.com/setup | bash -
 
 nodejs:
-  pkg.installed:
-    - pkgrepo: node_ppa
-
-node_modules:
-  npm.installed:
-    - names:
-      - yo
-      - generator-ember
-      - generator-angular
-      - generator-express
-      - generator-webapp
+  pkg.latest:
+    - cmd: node_repo

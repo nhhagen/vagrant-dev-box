@@ -1,11 +1,5 @@
 ruby-dev:
-  pkg.installed
+  pkg.latest
 
 ruby:
-  pkg.installed
-
-gems:
-  gem.installed:
-    - names:
-      - sass
-      - compass
+  pkg.latest

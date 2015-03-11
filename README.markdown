@@ -68,3 +68,8 @@ not need in your project.
 
 The main file to include or exclude software is `./salt/roots/salt/top.sls`.
 
+After adding new software to the saltstack configuration run:
+
+```bash
+vagrant provision
+```

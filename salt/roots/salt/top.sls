@@ -12,3 +12,4 @@ base:
     # - elasticsearch # requires 'jdk'
     # - rabbitmq
     # - mysql
+    # - mongodb

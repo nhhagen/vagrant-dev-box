@@ -45,8 +45,8 @@ git clone <repo url>
 ## Starting the box
 
 ```bash
-vagrant up
-vagrant ssh
+vagrant up dev
+vagrant ssh dev
 cd /vagrant
 ```
 
@@ -55,7 +55,7 @@ This will place you inside the directory shared with the host OS.
 ## Stopping the box
 
 ```bash
-vagrant halt
+vagrant halt dev
 ```
 
 This will shutdown the virtual machine.
@@ -72,4 +72,50 @@ After adding new software to the saltstack configuration run:
 
 ```bash
 vagrant provision
+```
+
+# Test environment on Azure
+
+You need to create certificates before you can start and stop the test
+environment.
+
+## Manage certificates
+
+Generate keys
+
+```bash
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout .azure/myPrivateKey.key -out .azure/myCert.pem
+chmod 600 .azure/myPrivateKey.key
+openssl x509 -outform der -in .azure/myCert.pem -out .azure/myCert.cer
+```
+
+Combine `.azure/myCert.pem` and `.azure/myPrivateKey.key` and transform into
+`.azure/myCertPfx.pem`.
+
+```bash
+openssl pkcs12 -export -in .azure/myCert.pem -inkey .azure/myPrivateKey.key -out .azure/myCert.pfx
+openssl pkcs12 -in .azure/myCert.pfx -out .azure/myCertPfx.pem -nodes
+```
+
+Upload `.azure/myCert.cer` to
+[https://manage.windowsazure.com/#Workspace/AdminTasks/ListManagementCertificates](https://manage.windowsazure.com/#Workspace/AdminTasks/ListManagementCertificates).
+`.azure/myCertPfx.pem` and `.azure\myPrivateKey.key` are used in the
+`Vagrantfile`.
+
+The `.azure` should be shared by all project members.
+
+## Starting the box
+
+```bash
+vagrant up test provider=azure
+vagrant ssh test
+cd /vagrant
+```
+
+This will place you inside the directory shared with the host OS.
+
+## Stopping the box
+
+```bash
+vagrant halt test
 ```

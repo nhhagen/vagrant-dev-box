@@ -13,6 +13,7 @@ def setup(args):
     shutil.copytree('.', project_dir)
 
     remove_files = [
+        '.vagrant',
         '.git',
         'setup.py',
         'LICENSE'

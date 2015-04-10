@@ -7,7 +7,7 @@ include:
 elasticsearch_repo:
     pkgrepo.managed:
         - humanname: Elasticsearch Official Debian Repository
-        - name: deb http://packages.elasticsearch.org/elasticsearch/1.4/debian stable main
+        - name: deb http://packages.elasticsearch.org/elasticsearch/1.5/debian stable main
         - dist: stable
         - key_url: salt://elasticsearch/GPG-KEY-elasticsearch
         - file: /etc/apt/sources.list.d/elasticsearch.list

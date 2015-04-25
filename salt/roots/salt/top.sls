@@ -7,6 +7,7 @@ base:
     - python
     - ruby
     - nodejs
+    # - iojs
     # - jdk
     # - frontend_development # requires 'nodejs', 'ruby'
     # - elasticsearch # requires 'jdk'

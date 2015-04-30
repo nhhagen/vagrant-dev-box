@@ -17,5 +17,3 @@ packages:
       - compass
     - require:
       - sls: ruby
-
-

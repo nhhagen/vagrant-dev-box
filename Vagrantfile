@@ -22,6 +22,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.define :dev, primary: true do |dev|
+        dev.vm.hostname = 'develop'
         ports.each do |port|
             dev.vm.network :forwarded_port, guest: port, host: port
         end

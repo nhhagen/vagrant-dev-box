@@ -14,3 +14,5 @@ base:
     # - rabbitmq
     # - mysql
     # - mongodb
+  'develop':
+    - project

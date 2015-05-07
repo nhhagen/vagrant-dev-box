@@ -24,7 +24,7 @@ master: localhost
 # Since salt uses detached ids it is possible to run multiple minions on the
 # same machine but with different ids, this can be useful for salt compute
 # clusters.
-#id: testing
+id: develop
 
 # Append a domain to a hostname in the event that it does not exist.  This is
 # usefule for systems where socket.getfqdn() does not actually result in a
@@ -133,7 +133,7 @@ master: localhost
 # the master but used to reference a local directory on the minion.
 
 # Set the file client, the client defaults to looking on the master server for
-# files, but can be directed to look at the local file directory setting 
+# files, but can be directed to look at the local file directory setting
 # defined below by setting it to local.
 file_client: local
 

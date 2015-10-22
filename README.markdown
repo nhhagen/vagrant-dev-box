@@ -104,11 +104,19 @@ Upload `.azure/myCert.cer` to
 
 The `.azure` should be shared by all project members.
 
+## Edit `./Vagrantfile`
+
+Set your password to the box and your subscription_id
+```ruby
+password = '#########' # min 8 characters. should contain a lower case letter, an uppercase letter, a number and a special character
+azure.subscription_id = '####################################'
+```
+
 ## Starting the box
 
 ```bash
-vagrant up test provider=azure
-vagrant ssh test
+vagrant up azure --provider=azure
+vagrant ssh azure
 cd /vagrant
 ```
 
@@ -117,5 +125,5 @@ This will place you inside the directory shared with the host OS.
 ## Stopping the box
 
 ```bash
-vagrant halt test
+vagrant halt azure
 ```

@@ -34,10 +34,10 @@ Vagrant.configure("2") do |config|
         end
     end
 
-    config.vm.define :test, autostart: false do |test|
-        # test.vm.synced_folder ".", "/vagrant", disabled: true
+    config.vm.define :azure, autostart: false do |azure|
+        # azure.vm.synced_folder ".", "/vagrant", disabled: true
 
-        test.vm.provider :azure do |azure, override|
+        azure.vm.provider :azure do |azure, override|
             # username = 'azureuser'
             password = '#########' # min 8 characters. should contain a lower case letter, an uppercase letter, a number and a special character
 

@@ -1,6 +1,6 @@
 node_repo:
   cmd.run:
-    - name: curl -sL https://deb.nodesource.com/setup_0.12 | bash -
+    - name: curl -sL https://deb.nodesource.com/setup_4.x | bash -
 
 nodejs:
   pkg:
